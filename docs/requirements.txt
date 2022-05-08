@@ -2,6 +2,5 @@ sphinx
 myst_parser
 sphinx_rtd_theme
 sphinx_markdown_tables
-sphinxcontrib.inkscapeconverter
 sphinxcontrib.httpdomain
 sphinxemoji.sphinxemoji
