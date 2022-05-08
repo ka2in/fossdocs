@@ -20,7 +20,8 @@ python:
   version: "3.9"
   install:
     - path: .
-      method: setuptools
+      extra_requirements:
+        - docs/requirements.txt
   
   
  
