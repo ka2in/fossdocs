@@ -5,6 +5,9 @@
 # Required
 version: 2
 
+build:
+  image: testing
+
 # Build documentation in the myfossdocs/ directory with Sphinx
 sphinx:
    configuration: myfossdocs/source/conf.py
@@ -20,7 +23,5 @@ python:
       path: .
       extra_requirements:
         - myfossdocs
-  build:
-     image: testing
   
  
