@@ -19,7 +19,7 @@ formats: all
 python:
   version: "3.9"
   install:
-      extra_requirements:
+    - extra_requirements:
         - myfossdocs
   
  
