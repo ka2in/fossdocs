@@ -1,7 +1,7 @@
 sphinx==4.2.0
 myst_parser==0.15.2
 sphinx_rtd_theme==1.0.0
-sphinx_markdown_tables==1.8.0
+sphinx_markdown_tables==0.0.15
 sphinxcontrib-svg2pdfconverter==1.2.0
 sphinxcontrib.httpdomain==1.8.0
 sphinxemoji.sphinxemoji==0.2.0
