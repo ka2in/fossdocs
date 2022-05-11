@@ -113,15 +113,11 @@ To backup your website files and the corresponding database, follow these steps:
 		:alt: public_html in the cPanel
 		:align: center
 
-#. Once the backup process has completed, click on the "**i**" button below the green "**Download**" button on the right to display your "**Backup Archive Information**".
+#. Once the backup process has completed, click on the "**i**" button below the green "**Download**" button on the right to display your "**Backup Archive Information**". An Akeeba backup file has a ``.jpa`` extension.
 
 	.. figure:: akeeba-backup-management.png
 		:alt: public_html in the cPanel
 		:align: center
-
-	.. Note::
-
-		An Akeeba backup file has a ``.jpa`` extension
 
 #. In your shared hosting account, navigate to the location of your Akeeba backup file through **File Manager** > **public_html** > **path-to-akeeba-backup**. Download the .jpa file to your local machine.
 
