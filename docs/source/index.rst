@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to fossdocs's documentation!
+Welcome to fossdocs!
 ====================================
 
 You will find here FOSS tutorials about the following topics:
@@ -18,7 +18,7 @@ Fayçal Alami-Hassani - `@GlobalTech Translations <https://globaltech-translatio
 
 - Technical communicator, translator and interpreter
 - Markup: reStructuredText, Markdown, DocBook, XML
-- Web development: HTML, CSS, JavaScript, jQuery, MySQL
+- Web development: HTML, CSS, PHP, MySQL, JavaScript, jQuery
 - Text editors: Nano, Atom, Sublime Text
 - Version control: Git, CVS
 - OS: Debian, Fedora 
@@ -36,8 +36,14 @@ Fayçal Alami-Hassani - `@GlobalTech Translations <https://globaltech-translatio
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
    :caption: Contents:
+
+.. toctree::
+   :maxdepth: 4
+   :caption: joomla-to-vps
+
+   joomla-to-vps
 
 
 
