@@ -180,7 +180,9 @@ Replace domainname.com by your actual domain name, then press ``Ctrl + O`` to sa
 Clearing the DNS cache after updating your hosts file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Note: On some Linux systems, you may need to flush the DNS cache in order to update the domain resolution to the new IP address. On Debian-based distros, caching DNS queries is performed with the ``systemd-resolved`` daemon.
+.. Note:: 
+
+	On some Linux systems, you may need to flush the DNS cache in order to update the domain resolution to the new IP address. On Debian-based distros, caching DNS queries is performed with the ``systemd-resolved`` daemon.
 
 To find out if ``systemd-resolved`` is running on your system, type the following command in your terminal:
 
