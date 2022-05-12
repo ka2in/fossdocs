@@ -41,7 +41,7 @@ In this tutorial, you will learn how to migrate a Joomla website from a shared h
 .. _Requirements:     
 
 Requirements
------------- 
+============ 
 
 This tutorial assumes that you already have the following:
 
@@ -51,7 +51,9 @@ This tutorial assumes that you already have the following:
 
 - SSH access to your VPS server.
 
-Before you follow this guide, make sure to configure your environment accordingly. 
+Before you follow this guide, make sure to configure your environment accordingly.
+
+.. _Credentials: 
 
 Performing the backup on your shared hosting account
 ====================================================
@@ -229,11 +231,23 @@ Adding a ``DNS Zone`` generally involves the following steps:
    		:alt: DNS Zone editor
    		:align: center
 
-#. Select the tab **+A Record**. A new window with the title **Add an A Record for “yourdomain.com”** will open.
+#. In your **Zone Editor**, go to **Actions**, then select the tab **+A Record**. A new window with the title **Add an A Record for “yourdomain.com”** will open.
 
-#. In the name field, enter your fully-qualified domain name (FQDN) by appending a dot at the end of your domain name: ``joomla-domain.com.``.
+	.. figure:: a-record-dns.png
+   		:alt: A Record DNS
+   		:align: center
 
-#. In the address field, enter the IP address of your new Virtual Private Server (VPS). Remember that you want the DNS server to point to your new VPS. By doing so, you can test if everything is working fine before requesting a domain transfer.
+#. In the **Name** field, enter your fully-qualified domain name (FQDN) by appending a dot at the end of your domain name: ``joomla-domain.com.``.
+
+	.. figure:: a-record-dns-name.png
+   		:alt: A Record DNS Name
+   		:align: center
+
+#. In the **Address** field, enter the IP address of your new Virtual Private Server (VPS). Remember that you want the DNS server to point to your new VPS. By doing so, you can test if everything is working fine before requesting a domain transfer.
+
+	.. figure:: a-record-dns-address.png
+   		:alt: A Record DNS Address
+   		:align: center
 
 Uploading the required files to your VPS server
 ------------------------------------------------
@@ -462,6 +476,82 @@ In our particular scenario, this means that we can host all the following domain
 #. To check that the web server is serving your content now, go to ``http://joomla-domain`` in your browser. You should see the following output:
 
 	**The joomla-domain virtual host is up and running** 
+
+Restoring your Joomla website on the VPS
+========================================
+
+To restore your Joomla website on the VPS server, you first have to move the ``kickstart.php`` file and your Akeeba backup file ``backup-file.jpa`` to the root of our Joomla site, i.e. inside the folder ``/var/www/joomla-domain``. 
+
+#. If you have not already placed both files in the root of your Joomla site, open the terminal, then navigate to the folder containing both files. Next, type the following commands:
+
+	.. code-block:: bash
+		:linenos:
+
+		$ sudo mv kickstart.php /var/www/joomla-domain
+		$ sudo mv backup-file.jpa /var/www/joomla-domain
+
+   Replace the parameter ``backup-file.jpa`` by your actual backup file name.
+
+#. In your browser, type the following address:
+
+	``http://joomla-domain/kickstart.php``
+
+#. The welcome screen of Akeeba Kickstart appears. Press the button **Click here or press ESC to close this message** on the bottom left.
+
+	.. figure:: kickstart-welcome-screen.png
+		:alt: Kickstart Welcome Screen
+		:align: center
+
+#. The graphical interface of the **Akeeba archive extraction tool** will appear on your browser screen.
+
+	.. figure:: kickstart-extract-page.png
+		:alt: Kickstart Extract Page
+		:align: center
+
+#. Scroll to the bottom of the screen, then click on the **Start** green button under the section **Extract files**.
+
+	.. figure:: kickstart-extract-button-2.png
+		:alt: Kickstart Extract Button 2
+		:align: center
+
+#. The extraction progress window will appear. Once the files are extracted, click on the green button **Run the Installer** under **Restoration and Cleanup**
+
+	.. figure:: kickstart-extracting-bar.png
+		:alt: Kickstart Extracting Bar
+		:align: center
+
+#. The site restoration script of Akeeba Backup will perform a pre-installation check. This allows you to take the necessary actions to correct any possible issues. If everything is fine, press the button **→ Next** on the top right side of the screen.
+
+	.. figure:: kickstart-preinstallation-check.png
+		:alt: Kickstart Preinstallation Check
+		:align: center
+
+#. In the screen that appears, enter the credentials for the MySQL database that you have created. Once you have entered all the required information, click on the button **→ Next** on the top right side of the screen.
+
+	.. figure:: kickstart-restoration-database.png
+		:alt: Kickstart Restoration Database
+		:align: center
+
+#. A **Database Restoration Progress Bar** will appear. If the restoration was successful, you wil see the message: **The database restoration was successful**. 
+
+	.. figure:: kickstart-database-progress.png
+		:alt: Kickstart Database Progress
+		:align: center
+
+#. In the screen that appears, enter the site parameters such as "Site name" and Live site URL". Once you have entered all the required information, click on the button **→ Next** on the top right side of the screen.
+
+	.. figure:: kickstart-site-parameters.png
+		:alt: Kickstart Site Parameters
+		:align: center
+
+#. Once the restoration process has completed successfully, you will see the creen below. You can now visit you site's frontend or login to the site's backend.
+
+	.. figure:: restoration-cleanup-akeeba.png
+		:alt: Kickstart Restoration and Cleanup
+		:align: center
+
+
+
 
 
 

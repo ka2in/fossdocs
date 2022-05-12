@@ -41,7 +41,7 @@ Fayçal Alami-Hassani - `@GlobalTech Translations <https://globaltech-translatio
 
 .. toctree::
    :maxdepth: 4
-   :caption: joomla-to-vps
+   :caption: Joomla on a Virtual Private Server
 
    joomla-to-vps
 
