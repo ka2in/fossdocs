@@ -113,7 +113,11 @@ To backup your website files and the corresponding database, follow these steps:
 		:alt: public_html in the cPanel
 		:align: center
 
-#. Once the backup process has completed, click on the "**i**" button below the green "**Download**" button on the right to display your "**Backup Archive Information**". An Akeeba backup file has a ``.jpa`` extension.
+#. Once the backup process has completed, click on the "**i**" button below the green "**Download**" button on the right to display your "**Backup Archive Information**".
+
+	..	note::
+
+		An Akeeba backup file has a ``.jpa`` extension.
 
 	.. figure:: akeeba-backup-management.png
 		:alt: public_html in the cPanel
@@ -143,7 +147,7 @@ Preparing your new VPS server to host your website
 .. figure:: spacedog-repairman-mini.png
    :alt: Preparing your new VPS server
    :align: center
-   :scale: 95%
+   :scale: 60%
 
    "Spacedog Repairman" by `Katharsisdrill <https://katharsisdrill.art>`_ under `CC BY 4.0 <https://creativecommons.org/licenses/by/4.0/>`_ License
 
@@ -423,7 +427,7 @@ In our particular scenario, this means that we can host all the following domain
 
    		$ sudo a2ensite joomla-domain.conf
 
-   In the same manner that **a2ensite** adds symbolic links to enable a specific site, **a2dissite** removes symbolic links to disable a site. 
+#. In the same manner that **a2ensite** adds symbolic links to enable a specific site, **a2dissite** removes symbolic links to disable a site. 
 
    In our particular case, we will use a2dissite to disable the default configuration file called ``000-default.conf``. 
 
@@ -434,6 +438,32 @@ In our particular scenario, this means that we can host all the following domain
    .. code-block:: bash
 
    		$ sudo a2dissite 000-default.conf
+
+#. Make sure that your configuration does not contain any erros by running the following command:
+
+	.. code-block:: bash
+
+   		$ sudo apache2ctl configtest
+
+   If everything is fine, you should get the following output:
+
+	.. code-block:: bash
+		:linenos:
+
+		Output
+		Syntax OK
+
+#. Each time you modify the Apache configuration, you need to restart the Apache service. Use the following command to restart Apache:
+
+	.. code-block:: bash
+
+   		$ sudo systemctl restart apache2
+
+#. To check that the web server is serving your content now, go to ``http://joomla-domain`` in your browser. You should see the following output:
+
+	**The joomla-domain virtual host is up and running** 
+
+
 
 
 

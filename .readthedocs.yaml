@@ -6,7 +6,7 @@
 version: 2
 
 build:
-  image: testing
+  image: ubuntu-20.04
 
 # Build documentation in the docs/ directory with Sphinx
 sphinx:
