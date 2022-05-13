@@ -137,7 +137,7 @@ To backup your website files and the corresponding database, follow these steps:
 
 #. Save your changes and return to your Joomla Backend. Go to **System** > **Global Configuration** > **Server**. 
 
-#. Navigate to the option Force HTTPS and select Entire Site from the drop-down menu
+#. Navigate to the option **Force HTTPS** and select **Entire Site** from the drop-down menu.
 
 #. Download the `Akeeba Kickstart Core <https://www.akeeba.com/products/akeeba-kickstart.html>`_ by clicking on the button **Download Core**.
 
@@ -210,7 +210,7 @@ The entry ``Current Cache Size: 0`` will appear in the output if the DNS cache h
 Option 2: Adjusting the DNS records
 ----------------------------------- 
 
-For testing purposes, you can create a ``DNS Zone`` on for your domain on the new VPS server. The ``DNS Zone`` section allows you to configure your domain for the different services that you intend to provide.
+For testing purposes, you can create a ``DNS Zone`` for your domain on the new VPS server. The ``DNS Zone`` section allows you to configure your domain for the different services that you intend to provide.
 
 Suppose that you already have a domain that is registered with another service provider. To avoid any service interruptions before transferring your domain to a new provider, you can add a DNS zone before you begin the domain name transfer process.
 		
@@ -245,7 +245,7 @@ Adding a ``DNS Zone`` generally involves the following steps:
    		:alt: A Record DNS Name
    		:align: center
 
-#. In the **Address** field, enter the IP address of your new Virtual Private Server (VPS). Remember that you want the DNS server to point to your new VPS. By doing so, you can test if everything is working fine before requesting a domain transfer.
+#. In the **Address** field, enter the IP address of your new Virtual Private Server (VPS). Remember that you want the DNS server from your shared hosting plan to point to your new VPS. By doing so, you can test if everything is working fine before requesting a domain transfer.
 
 	.. figure:: a-record-dns-address.png
    		:alt: A Record DNS Address
@@ -371,7 +371,7 @@ In our particular scenario, this means that we can host all the following domain
 
    Replace the parameter ``joomla-domain`` by the actual domain name that your are using for your Joomla website.
 
-#. Assign ownership of the newly created directory with the ``$USER`` environment variable by using the command below. The ``$USER`` environment variable is identical to the ``$LOGNAME`` environment variable, which represents the currently logged in user:
+#. Assign ownership of the newly created directory with the ``$USER`` environment variable by using the command below. The ``$USER`` environment variable is identical to the ``$LOGNAME`` environment variable, which represents the currently logged-in user:
    
 	.. code-block:: bash
 		
@@ -482,7 +482,7 @@ In our particular scenario, this means that we can host all the following domain
 Restoring your Joomla website on the VPS
 ========================================
 
-To restore your Joomla website on the VPS server, you first have to move the ``kickstart.php`` file and your Akeeba backup file ``backup-file.jpa`` to the root of our Joomla site, i.e. inside the folder ``/var/www/joomla-domain``. 
+To restore your Joomla website on the VPS server, you first have to move the file ``kickstart.php`` and your Akeeba backup file ``backup-file.jpa`` to the root of your site on the VPS, i.e. inside the folder ``/var/www/joomla-domain``. 
 
 #. If you have not already placed both files in the root of your Joomla site, open the terminal, then navigate to the folder containing both files. Next, type the following commands:
 
@@ -492,7 +492,7 @@ To restore your Joomla website on the VPS server, you first have to move the ``k
 		$ sudo mv kickstart.php /var/www/joomla-domain
 		$ sudo mv backup-file.jpa /var/www/joomla-domain
 
-   Replace the parameter ``backup-file.jpa`` by your actual backup file name.
+   Replace the parameter ``backup-file.jpa`` by the actual backup file name.
 
 #. In your browser, type the following address:
 
@@ -540,13 +540,13 @@ To restore your Joomla website on the VPS server, you first have to move the ``k
 		:alt: Kickstart Database Progress
 		:align: center
 
-#. In the screen that appears, enter the site parameters such as "Site name" and Live site URL". Once you have entered all the required information, click on the button **→ Next** on the top right side of the screen.
+#. In the screen that appears, enter the site parameters such as "Site name" and "Live site URL". Once you have entered all the required information, click on the button **→ Next** on the top right side of the screen.
 
 	.. figure:: kickstart-site-parameters.png
 		:alt: Kickstart Site Parameters
 		:align: center
 
-#. Once the restoration process has completed successfully, you will see the creen below. You can now visit you site's frontend or login to the site's backend.
+#. If the restoration process has completed successfully, you will see the creen below. You can now visit you site's frontend or login to the site's backend.
 
 	.. figure:: restoration-cleanup-akeeba.png
 		:alt: Kickstart Restoration and Cleanup
