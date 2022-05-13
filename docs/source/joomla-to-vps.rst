@@ -353,19 +353,19 @@ In our particular scenario, this means that we can host all the following domain
 
 #. Before you set up a virtual host, make sure that Apache is up and running on your VPS. To do so, type the following command:
 
-	.. code-block:: bash
+   .. code-block:: bash
 
 		$ sudo systemctl start apache2
 
 #. To start the Apache2 server automatically on boot, use the following command:
 
-	.. code-block:: bash
+   .. code-block:: bash
 
 		$ sudo systemctl enable apache2
 
 #. From now on, you will have to create a dedicated folder under ``/var/www`` for each new domain that you want to host on your VPS. For instance, to create the domain that will host your Joomla backup on the new VPS, type the following command:
 
-	.. code-block:: bash
+   .. code-block:: bash
 
 		$ sudo mkdir /var/www/joomla-domain
 
@@ -373,31 +373,31 @@ In our particular scenario, this means that we can host all the following domain
 
 #. Assign ownership of the newly created directory with the ``$USER`` environment variable by using the command below. The ``$USER`` environment variable is identical to the ``$LOGNAME`` environment variable, which represents the currently logged-in user:
    
-	.. code-block:: bash
+   .. code-block:: bash
 		
 		$ sudo chown -R $USER:$USER /var/www/joomla-domain
 
 #. Make sure that you granted the correct web root permissions by typing the command below. The folder's owner should have **read/write/execute** permissions, while group and others should only have **read/execute** privileges.
 
 
-	.. code-block:: bash
+   .. code-block:: bash
 
 		$ sudo chmod -R 755 /var/www/joomla-domain
 
 	
-	.. Note::
+   .. Note::
 
 		The default permissions on a web server are 755 for directories and 644 for files.
 
 #. In order for Apache to serve your content, you need to create an "Apache virtual host configuration file". To do so, we will create a new empty file with the nano editor:
 
-	.. code-block:: bash
+   .. code-block:: bash
 
 		$ sudo nano /etc/apache2/sites-available/joomla-domain.conf
 
    Put the following directives inside the configuration file:
 
-	.. code-block:: bash
+   .. code-block:: bash
 	   	:linenos: 
 
 		<VirtualHost *:80>
@@ -409,7 +409,7 @@ In our particular scenario, this means that we can host all the following domain
 		CustomLog ${APACHE_LOG_DIR}/access.log combined
 		</VirtualHost>
 
-	.. Note:: 
+   .. Note:: 
 
 		The email provided in the field ServerAdmin\ :sup:`[2]` is a placeholder. Make sure to use a working email address where the administrator of your Joomla domain can receive notifications. Also replace the parameters ``joomla-domain``\ :sup:`[3]` and ``www.joomla-domain``\ :sup:`[4]` by the actual domain name of your Joomla website.
 
@@ -417,7 +417,7 @@ In our particular scenario, this means that we can host all the following domain
 
 #. We will now use a sample ``index.html`` file to check if our virtual host is working properly. To do so, we will create a new empty file with the nano editor:
 
-	.. code-block:: bash
+   .. code-block:: bash
 
 		$ sudo nano /var/www/joomla-domain/index.html
 
@@ -457,13 +457,13 @@ In our particular scenario, this means that we can host all the following domain
 
 #. Make sure that your configuration does not contain any erros by running the following command:
 
-	.. code-block:: bash
+   .. code-block:: bash
 
    		$ sudo apache2ctl configtest
 
    If everything is fine, you should get the following output:
 
-	.. code-block:: bash
+   .. code-block:: bash
 		:linenos:
 
 		Output
@@ -471,7 +471,7 @@ In our particular scenario, this means that we can host all the following domain
 
 #. Each time you modify the Apache configuration, you need to restart the Apache service. Use the following command to restart Apache:
 
-	.. code-block:: bash
+   .. code-block:: bash
 
    		$ sudo systemctl restart apache2
 
@@ -486,7 +486,7 @@ To restore your Joomla website on the VPS server, you first have to move the fil
 
 #. If you have not already placed both files in the root of your Joomla site, open the terminal, then navigate to the folder containing both files. Next, type the following commands:
 
-	.. code-block:: bash
+   .. code-block:: bash
 		:linenos:
 
 		$ sudo mv kickstart.php /var/www/joomla-domain
@@ -496,41 +496,41 @@ To restore your Joomla website on the VPS server, you first have to move the fil
 
 #. In your browser, type the following address:
 
-	``http://joomla-domain/kickstart.php``
+   ``http://joomla-domain/kickstart.php``
 
 #. The welcome screen of Akeeba Kickstart appears. Press the button **Click here or press ESC to close this message** on the bottom left.
 
-	.. figure:: kickstart-welcome-screen.png
+   .. figure:: kickstart-welcome-screen.png
 		:alt: Kickstart Welcome Screen
 		:align: center
 
 #. The graphical interface of the **Akeeba archive extraction tool** will appear on your browser screen.
 
-	.. figure:: kickstart-extract-page.png
+   .. figure:: kickstart-extract-page.png
 		:alt: Kickstart Extract Page
 		:align: center
 
 #. Scroll to the bottom of the screen, then click on the **Start** green button under the section **Extract files**.
 
-	.. figure:: kickstart-extract-button-2.png
+   .. figure:: kickstart-extract-button-2.png
 		:alt: Kickstart Extract Button 2
 		:align: center
 
 #. The extraction progress window will appear. Once the files are extracted, click on the green button **Run the Installer** under **Restoration and Cleanup**
 
-	.. figure:: kickstart-extracting-bar.png
+   .. figure:: kickstart-extracting-bar.png
 		:alt: Kickstart Extracting Bar
 		:align: center
 
 #. The site restoration script of Akeeba Backup will perform a pre-installation check. This allows you to take the necessary actions to correct any possible issues. If everything is fine, press the button **→ Next** on the top right side of the screen.
 
-	.. figure:: kickstart-preinstallation-check.png
+   .. figure:: kickstart-preinstallation-check.png
 		:alt: Kickstart Preinstallation Check
 		:align: center
 
 #. In the screen that appears, enter the credentials for the MySQL database that you have created. Once you have entered all the required information, click on the button **→ Next** on the top right side of the screen.
 
-	.. figure:: kickstart-restoration-database.png
+   .. figure:: kickstart-restoration-database.png
 		:alt: Kickstart Restoration Database
 		:align: center
 
