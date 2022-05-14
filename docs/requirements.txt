@@ -5,3 +5,4 @@ sphinx_markdown_tables==0.0.15
 sphinxcontrib-svg2pdfconverter==1.2.0
 sphinxcontrib.httpdomain==1.8.0
 sphinxemoji==0.2.0
+sphinxext-photofinish==0.1.8

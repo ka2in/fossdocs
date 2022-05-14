@@ -41,6 +41,7 @@ extensions = [
     'sphinxcontrib.inkscapeconverter',
     'sphinxcontrib.httpdomain',
     'sphinxemoji.sphinxemoji',
+    'sphinxext.photofinish',
 ]
 
 source_suffix = {

@@ -10,7 +10,7 @@ Published on May 11, 2022 by Fayçal Alami-Hassani `@gnufcl@fosstodon.org <https
    :alt: Migrating Joomla from shared hosting to VPS
    :align: center
 
-   Picture by Stephane Wootha Richard under `CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0/deed.en>`_ License
+   Picture by Stéphane Wootha Richard under `CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0/deed.en>`_ License
 
 Migrating a website from a shared hosting plan to an unmanaged VPS might seem a daunting task at the beginning. Depending on your acquaintance with server administration, it may take you a few days to several weeks to gather all the relevant information and organize the required steps in a structured, logical way to set up a custom migration project. 
 
