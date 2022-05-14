@@ -149,7 +149,7 @@ Preparing your new VPS server to host your website
 .. figure:: spacedog-repairman-mini.png
    :alt: Preparing your new VPS server
    :align: center
-   :scale: 60%
+   :scale: 50%
 
    "Spacedog Repairman" by `Katharsisdrill <https://katharsisdrill.art>`_ under `CC BY 4.0 <https://creativecommons.org/licenses/by/4.0/>`_ License
 
