@@ -310,7 +310,7 @@ Once you enter your password, you will get access to the MySQL shell prompt. Now
 
 	- Use lowercase
 	- Use only alphabetical characters
-	- Do not use numerical characters
+	- Do not use numeric characters
 	- Avoid using prefixes
 	- Give your database a self-explanatory name
 
