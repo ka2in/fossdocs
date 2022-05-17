@@ -103,6 +103,8 @@ To backup your website files and the corresponding database, follow these steps:
 		:alt: public_html in the cPanel
 		:align: center
 
+.. _disablessl:
+
 #. Before making a backup with akeeba, make sure to disable SSL. To do so, navigate to **System** > **Global Configuration** > **Server** > **Force HTTPS**. Select the option **None** from the drop-down menu.
 
 	.. figure:: global-configuration-joomla.png
@@ -528,7 +530,7 @@ To restore your Joomla website on the VPS server, you first have to move the fil
 		:alt: Kickstart Preinstallation Check
 		:align: center
 
-#. In the screen that appears, enter the credentials for the MySQL database that you have created. Once you have entered all the required information, click on the button **→ Next** on the top right side of the screen.
+#. In the screen that appears, enter the :ref:`credentials <credentials>` for the MySQL database that you have created. Once you have entered all the required information, click on the button **→ Next** on the top right side of the screen.
 
    .. figure:: kickstart-restoration-database.png
 		:alt: Kickstart Restoration Database
@@ -551,6 +553,110 @@ To restore your Joomla website on the VPS server, you first have to move the fil
 	.. figure:: restoration-cleanup-akeeba.png
 		:alt: Kickstart Restoration and Cleanup
 		:align: center
+
+Installing Let's Encrypt certificates with Certbot
+==================================================
+
+Now that you have restored your Joomla website, remember that you had :ref:`disabled SSL <disablessl>` before you made the backup with Akeeba.
+To protect your website, you can install TLS/SSL certificates from Let's Encrypt. 
+
+Let's Encrypt is a non-profit and open certificate authority managed by the `Internet Security Research Group <https://www.abetterinternet.org/>`_, a public-benefit corporation based in California.
+
+To issue the TLS/SSL certificates and install them automatically on the web server, we are going to use Certbot, an open-source software developed by the `Electronic Frontier Foundation <https://www.eff.org/>`_. 
+
+.. figure:: certbot.jpg
+   :alt: Installing Let's Encrypt certificates with Certbot
+   :align: center
+
+   Picture by the Electronic Frontier Foundation under `CC BY 2.0 <https://creativecommons.org/licenses/by/2.0/>`_ License
+
+.. Note::
+
+	Before you follow the instructions below, make sure HTTPS traffic is allowed by your firewall. The default port number for HTTPS traffic is 443. 
+
+#. In your terminal, run the following command to install Certbot with the plugin that allows the integration with the Apache web server:
+
+	   .. code-block:: bash
+
+   		$ sudo apt install certbot python3-certbot-apache
+
+#. Press ``Y``, then ``Enter`` to run the installation.
+
+#. To issue a certificate and reconfigure apache automatically, run the command:
+
+	   .. code-block:: bash
+
+   		$ sudo certbot --apache
+			
+#. Carefully read the questions that will appear on your terminal. Provide a valid email address.
+
+#. Agree to the "Terms of Service" by pressing ``A`` (short for Agree).
+   
+#. Choose whether you want to share your email address with the Electronic Frontier Foundation by pressing ``Y`` to confirm or ``N`` to refuse.
+
+#. You will then get the output shown below. Indicate the domains that you want to enable HTTPS for by selecting the appropriate listed numbers: 
+
+	.. code-block:: bash
+		
+		Plugins selected: Authenticator apache, Installer apache
+
+		Which names would you like to activate HTTPS for?
+		- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		1: joomla-domain.com
+		2: www.joomla-domain.com
+		- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		Select the appropriate numbers separated by commas and/or spaces, or leave input
+		blank to select all options shown (Enter 'c' to cancel): c
+		Please specify --domains, or --installer that will help in domain names autodiscovery, or --cert-name for an existing certificate name.
+
+#. In the next prompt that appears, choose whether or not you want to force redirecting HTTP to HTTPS traffic.
+
+	.. code-block:: bash
+
+		Please choose whether or not to redirect HTTP traffic to HTTPS, removing HTTP access.
+		- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		1: No redirect - Make no further changes to the webserver configuration.
+		2: Redirect - Make all requests redirect to secure HTTPS access. Choose this for
+		new sites, or if you're confident your site works on HTTPS. You can undo this
+		change by editing your web server's configuration.
+		- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 
+
+#. Once you have answered all the questions, Certbot will start the installation.
+
+#. If the installation was successful, you will get the following output:
+
+	.. code-block::
+
+		- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		Congratulations! You have successfully enabled https://www.joomla-domain.com
+
+		You should test your configuration at:
+		https://www.ssllabs.com/ssltest/analyze.html?d=www.joomla-domain.com
+		- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+		IMPORTANT NOTES:
+		 - Congratulations! Your certificate and chain have been saved at:
+		   /etc/letsencrypt/live/www.joomla-domain.com/fullchain.pem
+		   Your key file has been saved at:
+		   /etc/letsencrypt/live/www.joomla-domain.com/privkey.pem
+		   Your cert will expire on 2022-10-25. To obtain a new or tweaked
+		   version of this certificate in the future, simply run certbot again
+		   with the "certonly" option. To non-interactively renew *all* of
+		   your certificates, run "certbot renew"
+		 - If you like Certbot, please consider supporting our work by:
+
+		   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+		   Donating to EFF:                    https://eff.org/donate-le
+
+Certbot has now installed your TLS/SSL certificate and configured Apache accordingly.
+
+
+	
+
+
+
+
 
 
 
