@@ -192,7 +192,7 @@ To protect your directory content against curious eyes, you need to modify the c
 			        Require all granted
 			</Directory>
 
-#. Add a minus sign "-" before the keywords ``Indexes`` and ``FollowSymLinks`` to prevent Apache from generating open directory listings. The result should look like this:
+#. Add a minus sign "-" before the keywords ``Indexes`` and ``FollowSymLinks`` to prevent Apache from generating open directory listings and following symbolic links. The result should look like this:
 
 	.. code-block:: bash
 
