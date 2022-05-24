@@ -106,7 +106,7 @@ You should then get an output like the one below. Note that the details of your 
 	X-Frame-Options: sameorigin
 	Content-Type: text/html; charset=utf-8
 
-#. To hide your operating system and Apache version, you need to adjust the settings of your ``apache2.conf`` file. To revert your settings to their initial state in case of a faulty configuration, you will first make a backup of this file with the following command:
+#. To hide your operating system and Apache version, you need to adjust the settings of your ``apache2.conf`` file. To revert your settings to their initial state in case of a faulty configuration, you should first make a backup of this file with the following command:
 
 	.. code-block:: bash
 

@@ -70,6 +70,16 @@ exclude_patterns = []
 #
 html_theme = 'sphinx_rtd_theme'
 
+# The encoding of source files.
+#
+# source_encoding = 'utf-8-sig'
+
+# The name of the Pygments (syntax highlighting) style to use.
+pygments_style = 'sphinx'
+
+# The master toctree document.
+master_doc = 'index'
+
 # -- Adding options for TOC ------------------------------------------------
 
 html_theme_options = {
@@ -144,3 +154,28 @@ latex_elements = {
 # Latex figure (float) alignment
     'figure_align': 'htbp',
 }
+
+# -- Options for manual page output ---------------------------------------
+
+# One entry per manual page. List of tuples
+# (source start file, name, description, authors, manual section).
+man_pages = [
+    (master_doc, 'test', u'test Documentation',
+     [author], 1)
+]
+
+# If true, show URL addresses after external links.
+#
+# man_show_urls = False
+
+
+# -- Options for Texinfo output -------------------------------------------
+
+# Grouping the document tree into Texinfo files. List of tuples
+# (source start file, target name, title, author,
+#  dir menu entry, description, category)
+texinfo_documents = [
+    (master_doc, 'test', u'test Documentation',
+     author, 'test', 'One line description of project.',
+     'Miscellaneous'),
+]
