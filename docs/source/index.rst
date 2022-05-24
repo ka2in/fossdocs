@@ -36,8 +36,7 @@ Fayçal Alami-Hassani - `@GlobalTech Translations <https://globaltech-translatio
 
 
 .. toctree::
-   :maxdepth: 4
-   :caption: Contents:
+   :caption: Table of Contents
 
 .. toctree::
    :maxdepth: 4
@@ -45,6 +44,11 @@ Fayçal Alami-Hassani - `@GlobalTech Translations <https://globaltech-translatio
 
    joomla-to-vps
 
+.. toctree::
+   :maxdepth: 4
+   :caption: Hardening Apache on a VPS
+
+   hardening-apache
 
 
 Indices and tables

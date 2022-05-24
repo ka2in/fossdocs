@@ -6,7 +6,7 @@ Migrating a Joomla website from shared hosting to an unmanaged VPS
 
 Published on May 11, 2022 by Fayçal Alami-Hassani `@gnufcl@fosstodon.org <https://fosstodon.org/@gnufcl>`_
 
-.. figure:: talk-to-me-mini.jpg
+.. figure:: pics/talk-to-me-mini.jpg
    :alt: Migrating Joomla from shared hosting to VPS
    :align: center
 
@@ -40,8 +40,8 @@ In this tutorial, you will learn how to migrate a Joomla website from a shared h
 
 .. _Requirements:     
 
-Requirements
-============ 
+Prerequisites
+==============
 
 This tutorial assumes that you already have the following:
 
@@ -64,7 +64,7 @@ To backup your website files and the corresponding database, follow these steps:
 
 #. In your cPanel, go to **File Manager** > **public_html**.
 
-	.. figure:: file-manager-cpanel.png
+	.. figure:: pics/file-manager-cpanel.png
 		:alt: File Manager in cPanel
 		:align: center
 
@@ -75,45 +75,43 @@ To backup your website files and the corresponding database, follow these steps:
    - ``public $db``: Database name
    - ``public $dbprefix``: Database prefix  
 
-	.. figure:: public-html.png
+	.. figure:: pics/public-html.png
 		:alt: public_html in the cPanel
 		:align: center
 
 #. In the cPanel main menu, go to **Backup** > **Databases** > **MySQL® Database Wizard**.
 
-	.. figure:: mysql-database-wizard.png
+	.. figure:: pics/mysql-database-wizard.png
 		:alt: public_html in the cPanel
 		:align: center
 
    The Backup Wizard provides multiple options. Select **Full or Partial Backup** > **Select Partial Backup** > **MySQL Databases**. This will allow you to download a backup of the MySQL database(s) of your Joomla website to your local machine.
 
-	.. figure:: partial-backup-db.png
+	.. figure:: pics/partial-backup-db.png
 		:alt: public_html in the cPanel
 		:align: center 
 
 #. Login to the backend of your Joomla website.
 
-	.. figure:: backend-login-joomla.png
+	.. figure:: pics/backend-login-joomla.png
 		:alt: public_html in the cPanel
 		:align: center
 
 #. To backup the website files, we will use an extension called `Akeeba Backup <https://www.akeeba.com/products/akeeba-backup.html>`_. 
 
- 	.. figure:: akeeba-backup-backend.png
+ 	.. figure:: pics/akeeba-backup-backend.png
 		:alt: public_html in the cPanel
 		:align: center
 
-.. _disablessl:
+#. Before making a backup with akeeba, make sure to _`disable SSL`. To do so, navigate to **System** > **Global Configuration** > **Server** > **Force HTTPS**. Select the option **None** from the drop-down menu.
 
-#. Before making a backup with akeeba, make sure to disable SSL. To do so, navigate to **System** > **Global Configuration** > **Server** > **Force HTTPS**. Select the option **None** from the drop-down menu.
-
-	.. figure:: global-configuration-joomla.png
+	.. figure:: pics/global-configuration-joomla.png
 		:alt: public_html in the cPanel
 		:align: center
 
 #. Next, go to **Components** > **Akeeba Backup** > **One-Click Backup** > **Default Backup Profile**
 
-	.. figure:: akeeba-backup-demo.png
+	.. figure:: pics/akeeba-backup-demo.png
 		:alt: public_html in the cPanel
 		:align: center
 
@@ -123,7 +121,7 @@ To backup your website files and the corresponding database, follow these steps:
 
 		An Akeeba backup file has a ``.jpa`` extension.
 
-	.. figure:: akeeba-backup-management.png
+	.. figure:: pics/akeeba-backup-management.png
 		:alt: public_html in the cPanel
 		:align: center
 
@@ -148,7 +146,7 @@ To backup your website files and the corresponding database, follow these steps:
 Preparing your new VPS server to host your website
 ===================================================
 
-.. figure:: spacedog-repairman-mini.png
+.. figure:: pics/spacedog-repairman-mini.png
    :alt: Preparing your new VPS server
    :align: center
    :scale: 50%
@@ -231,25 +229,25 @@ Adding a ``DNS Zone`` generally involves the following steps:
 
 #. In your cPanel, go to **Domains** > **Zone Editor**.
 
-	.. figure:: dns-zone-editor.png
+	.. figure:: pics/dns-zone-editor.png
    		:alt: DNS Zone editor
    		:align: center
 
 #. In your **Zone Editor**, go to **Actions**, then select the tab **+A Record**. A new window with the title **Add an A Record for “yourdomain.com”** will open.
 
-	.. figure:: a-record-dns.png
+	.. figure:: pics/a-record-dns.png
    		:alt: A Record DNS
    		:align: center
 
 #. In the **Name** field, enter your fully-qualified domain name (FQDN) by appending a dot at the end of your domain name: ``joomla-domain.com.``.
 
-	.. figure:: a-record-dns-name.png
+	.. figure:: pics/a-record-dns-name.png
    		:alt: A Record DNS Name
    		:align: center
 
 #. In the **Address** field, enter the IP address of your new Virtual Private Server (VPS). Remember that you want the DNS server from your shared hosting plan to point to your new VPS. By doing so, you can test if everything is working fine before requesting a domain transfer.
 
-	.. figure:: a-record-dns-address.png
+	.. figure:: pics/a-record-dns-address.png
    		:alt: A Record DNS Address
    		:align: center
 
@@ -502,69 +500,69 @@ To restore your Joomla website on the VPS server, you first have to move the fil
 
 #. The welcome screen of Akeeba Kickstart appears. Press the button **Click here or press ESC to close this message** on the bottom left.
 
-   .. figure:: kickstart-welcome-screen.png
+   .. figure:: pics/kickstart-welcome-screen.png
 		:alt: Kickstart Welcome Screen
 		:align: center
 
 #. The graphical interface of the **Akeeba archive extraction tool** will appear on your browser screen.
 
-   .. figure:: kickstart-extract-page.png
+   .. figure:: pics/kickstart-extract-page.png
 		:alt: Kickstart Extract Page
 		:align: center
 
 #. Scroll to the bottom of the screen, then click on the **Start** green button under the section **Extract files**.
 
-   .. figure:: kickstart-extract-button-2.png
+   .. figure:: pics/kickstart-extract-button-2.png
 		:alt: Kickstart Extract Button 2
 		:align: center
 
 #. The extraction progress window will appear. Once the files are extracted, click on the green button **Run the Installer** under **Restoration and Cleanup**
 
-   .. figure:: kickstart-extracting-bar.png
+   .. figure:: pics/kickstart-extracting-bar.png
 		:alt: Kickstart Extracting Bar
 		:align: center
 
 #. The site restoration script of Akeeba Backup will perform a pre-installation check. This allows you to take the necessary actions to correct any possible issues. If everything is fine, press the button **→ Next** on the top right side of the screen.
 
-   .. figure:: kickstart-preinstallation-check.png
+   .. figure:: pics/kickstart-preinstallation-check.png
 		:alt: Kickstart Preinstallation Check
 		:align: center
 
-#. In the screen that appears, enter the :ref:`credentials <credentials>` for the MySQL database that you have created. Once you have entered all the required information, click on the button **→ Next** on the top right side of the screen.
+#. In the screen that appears, enter the :ref:`credentials <Credentials>` for the MySQL database that you have created. Once you have entered all the required information, click on the button **→ Next** on the top right side of the screen.
 
-   .. figure:: kickstart-restoration-database.png
+   .. figure:: pics/kickstart-restoration-database.png
 		:alt: Kickstart Restoration Database
 		:align: center
 
 #. A **Database Restoration Progress Bar** will appear. If the restoration was successful, you wil see the message: **The database restoration was successful**. 
 
-	.. figure:: kickstart-database-progress.png
+	.. figure:: pics/kickstart-database-progress.png
 		:alt: Kickstart Database Progress
 		:align: center
 
 #. In the screen that appears, enter the site parameters such as "Site name" and "Live site URL". Once you have entered all the required information, click on the button **→ Next** on the top right side of the screen.
 
-	.. figure:: kickstart-site-parameters.png
+	.. figure:: pics/kickstart-site-parameters.png
 		:alt: Kickstart Site Parameters
 		:align: center
 
 #. If the restoration process has completed successfully, you will see the creen below. You can now visit you site's frontend or login to the site's backend.
 
-	.. figure:: restoration-cleanup-akeeba.png
+	.. figure:: pics/restoration-cleanup-akeeba.png
 		:alt: Kickstart Restoration and Cleanup
 		:align: center
 
 Installing Let's Encrypt certificates with Certbot
 ==================================================
 
-Now that you have restored your Joomla website, remember that you had :ref:`disabled SSL <disablessl>` before you made the backup with Akeeba.
+Now that you have restored your Joomla website, remember that you had to `disable SSL`_ before making the backup with Akeeba.
 To protect your website, you can install TLS/SSL certificates from Let's Encrypt. 
 
 Let's Encrypt is a non-profit and open certificate authority managed by the `Internet Security Research Group <https://www.abetterinternet.org/>`_, a public-benefit corporation based in California.
 
 To issue the TLS/SSL certificates and install them automatically on the web server, we are going to use Certbot, an open-source software developed by the `Electronic Frontier Foundation <https://www.eff.org/>`_. 
 
-.. figure:: certbot.jpg
+.. figure:: pics/certbot.jpg
    :alt: Installing Let's Encrypt certificates with Certbot
    :align: center
 
