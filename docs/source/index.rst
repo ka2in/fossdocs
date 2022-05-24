@@ -35,8 +35,9 @@ Fayçal Alami-Hassani - `@GlobalTech Translations <https://globaltech-translatio
    This project is under active development. If you have any questions, please send an email to: info[@]globaltech-translations[.]com - ``PGP KeyID: 0x52D6AF10``
 
 
-.. toctree::
-   :caption: Table of Contents
+-----------------
+Table of Contents
+-----------------
 
 .. toctree::
    :maxdepth: 4
@@ -46,14 +47,6 @@ Fayçal Alami-Hassani - `@GlobalTech Translations <https://globaltech-translatio
 
 .. toctree::
    :maxdepth: 4
-   :caption: Hardening Apache on a VPS
+   :caption: Hardening Apache
 
    hardening-apache
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
