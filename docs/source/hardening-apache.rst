@@ -4,6 +4,8 @@
 Hardening Apache on an unmanaged VPS 
 =====================================
 
+.. include:: <isonum.txt>
+
 Published on May 22, 2022 by Fayçal Alami-Hassani `@gnufcl@fosstodon.org <https://fosstodon.org/@gnufcl>`_
 
 .. figure:: pics/scifi-ball-mini.png
@@ -53,22 +55,20 @@ To manage user and group privileges on your server, you need to access the ``env
 
 #. Set the variables ``APACHE_RUN_USER`` and ``APACHE_RUN_GROUP`` to a non-root user and group, respectively. 
 
-The table below illustrates some possible values for a non-root ``user`` and ``group``:
+   The table below illustrates some possible values for a non-root ``user`` and ``group``: 
 
-.. include:: <isonum.txt> 
+   .. table::
+      :class: tight-table
 
-.. table::
-   :class: tight-table
-
-   +-------------------------------------------------+------------------+------------------+
-   | |darr| Value Pair / Environment Variable |rarr| | APACHE_RUN_USER  | APACHE_RUN_GROUP |
-   +=================================================+==================+==================+
-   | VALUE PAIR 1                                    | apache           | apache           |
-   +-------------------------------------------------+------------------+------------------+
-   | VALUE PAIR 2                                    | nobody           | nogroup          |
-   +-------------------------------------------------+------------------+------------------+
-   | VALUE PAIR 3                                    | www-data         | www-data         |
-   +-------------------------------------------------+------------------+------------------+
+      +-------------------------------------------------+------------------+------------------+
+      | |darr| Value Pair / Environment Variable |rarr| | APACHE_RUN_USER  | APACHE_RUN_GROUP |
+      +=================================================+==================+==================+
+      | VALUE PAIR 1                                    | apache           | apache           |
+      +-------------------------------------------------+------------------+------------------+
+      | VALUE PAIR 2                                    | nobody           | nogroup          |
+      +-------------------------------------------------+------------------+------------------+
+      | VALUE PAIR 3                                    | www-data         | www-data         |
+      +-------------------------------------------------+------------------+------------------+
 
 Hiding your operating system and Apache version
 ================================================ 
@@ -167,6 +167,12 @@ Disabling open directory listings
 =================================
 
 If a directory inside your filesystem lacks an index file such as ``index.html`` or ``index.php``, the web server automatically generates a listing of that particular directory. When this feature is enabled, intruders and eavesdroppers can explore the content of your folders to spot any existing vulnerabilities.
+
+.. figure:: pics/index-of.png
+   :alt: A directory without an index file
+   :align: center
+
+   An example of an open directory listing
 
 To protect your directory content against curious eyes, you need to modify the configuration of your ``apache2.conf`` file. 
 
