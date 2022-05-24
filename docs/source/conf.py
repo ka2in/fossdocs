@@ -54,14 +54,6 @@ source_suffix = {
 
 sphinxemoji_style = 'twemoji'
 
-# Settings for sphinx-markdown-tables
-
-source_parsers = {
-    '.md': 'recommonmark.parser.CommonMarkParser',
-}
-
-source_suffix = ['.rst', '.md']
-
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -101,10 +93,16 @@ def setup(app):
 
 html_show_sourcelink = False
 
+# Enable numref
+# The numref role is used to reference numbered elements of the documentation. For example, tables and images.
+
+#numfig = True
+#numfig_secnum_depth = 1
+
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 
-html_logo = "circular-geometry.png"
+html_logo = "pics/circular-geometry.png"
 
 
 # LaTeX customization for PDF
