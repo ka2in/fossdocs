@@ -1,6 +1,7 @@
 .. meta::
    :keywords: joomla, vps, sharedhosting, serveradmin, webdev, migration, unmanagedvps
 
+===================================================================
 Migrating a Joomla website from shared hosting to an unmanaged VPS 
 ===================================================================
 
@@ -149,7 +150,7 @@ Preparing your new VPS server to host your website
 .. figure:: pics/spacedog-repairman-mini.png
    :alt: Preparing your new VPS server
    :align: center
-   :scale: 50%
+   :width: 450
 
    "Spacedog Repairman" by `Katharsisdrill <https://katharsisdrill.art>`_ under `CC BY 4.0 <https://creativecommons.org/licenses/by/4.0/>`_ License
 
@@ -272,6 +273,7 @@ Replace the parameters of the scp command by their actual values, i.e.:
 
 .. table::
    :class: tight-table
+   :widths: 30 70
 
    +---------------+--------------------------------------------------------------------------------------------------------------------------+
    | Parameter     | Description                                                                                                              |

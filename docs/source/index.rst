@@ -35,18 +35,9 @@ Fayçal Alami-Hassani - `@GlobalTech Translations <https://globaltech-translatio
    This project is under active development. If you have any questions, please send an email to: info[@]globaltech-translations[.]com - ``PGP KeyID: 0x52D6AF10``
 
 
------------------
-Table of Contents
------------------
-
 .. toctree::
    :maxdepth: 4
-   :caption: Joomla on a Virtual Private Server
+   :caption: Contents
 
    joomla-to-vps
-
-.. toctree::
-   :maxdepth: 4
-   :caption: Hardening Apache
-
    hardening-apache

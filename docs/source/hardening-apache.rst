@@ -1,6 +1,7 @@
 .. meta::
    :keywords: apache, vps, unmanagedvps, hardening, security, webdev
 
+=====================================
 Hardening Apache on an unmanaged VPS 
 =====================================
 
