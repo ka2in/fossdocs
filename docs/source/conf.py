@@ -131,6 +131,7 @@ latex_elements = {
 \setlength{\cftsecindent}{\cftchapnumwidth}
 \setlength{\cftsecnumwidth}{1.25cm}
 ''',
+    'pxunit': '1bp',
 }
 
 latex_show_urls = 'footnote'
@@ -152,7 +153,10 @@ latex_elements = {
     'papersize': 'a4paper',
 
 # Latex figure (float) alignment
-    'figure_align': 'htbp',
+# Latex figure float alignment. Whenever an image doesn’t fit into the current page, it will be ‘floated’ into the next page but may be preceded by any other text. 
+# If you don’t like this behavior, use ‘H’ which will disable floating and position figures strictly in the order they appear in the source.
+
+    'figure_align': 'H',
 }
 
 # -- Options for manual page output ---------------------------------------
