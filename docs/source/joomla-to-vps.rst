@@ -98,6 +98,10 @@ To backup your website files and the corresponding database, follow these steps:
 		:alt: public_html in the cPanel
 		:align: center
 
+	.. raw:: latex
+
+		\newpage
+
 #. To backup the website files, we will use an extension called `Akeeba Backup <https://www.akeeba.com/products/akeeba-backup.html>`_. 
 
  	.. figure:: pics/akeeba-backup-backend.png
@@ -109,6 +113,10 @@ To backup your website files and the corresponding database, follow these steps:
 	.. figure:: pics/global-configuration-joomla.png
 		:alt: public_html in the cPanel
 		:align: center
+
+	.. raw:: latex
+
+		\newpage
 
 #. Next, go to **Components** > **Akeeba Backup** > **One-Click Backup** > **Default Backup Profile**
 
@@ -245,6 +253,10 @@ Adding a ``DNS Zone`` generally involves the following steps:
 	.. figure:: pics/a-record-dns-name.png
    		:alt: A Record DNS Name
    		:align: center
+
+   	.. raw:: latex
+
+		\newpage
 
 #. In the **Address** field, enter the IP address of your new Virtual Private Server (VPS). Remember that you want the DNS server from your shared hosting plan to point to your new VPS. By doing so, you can test if everything is working fine before requesting a domain transfer.
 
@@ -423,6 +435,10 @@ In our particular scenario, this means that we can host all the following domain
 
 		$ sudo nano /var/www/joomla-domain/index.html
 
+   .. raw:: latex
+
+		\newpage
+
    Add the following lines in the empty file:
 
    .. code-block:: html
@@ -512,6 +528,10 @@ To restore your Joomla website on the VPS server, you first have to move the fil
 		:alt: Kickstart Extract Page
 		:align: center
 
+   .. raw:: latex
+
+	\newpage
+
 #. Scroll to the bottom of the screen, then click on the **Start** green button under the section **Extract files**.
 
    .. figure:: pics/kickstart-extract-button-2.png
@@ -530,6 +550,10 @@ To restore your Joomla website on the VPS server, you first have to move the fil
 		:alt: Kickstart Preinstallation Check
 		:align: center
 
+   .. raw:: latex
+
+		\newpage
+
 #. In the screen that appears, enter the :ref:`credentials <Credentials>` for the MySQL database that you have created. Once you have entered all the required information, click on the button **→ Next** on the top right side of the screen.
 
    .. figure:: pics/kickstart-restoration-database.png
@@ -541,6 +565,10 @@ To restore your Joomla website on the VPS server, you first have to move the fil
 	.. figure:: pics/kickstart-database-progress.png
 		:alt: Kickstart Database Progress
 		:align: center
+
+	.. raw:: latex
+
+		\newpage
 
 #. In the screen that appears, enter the site parameters such as "Site name" and "Live site URL". Once you have entered all the required information, click on the button **→ Next** on the top right side of the screen.
 
@@ -593,6 +621,10 @@ To issue the TLS/SSL certificates and install them automatically on the web serv
 #. Agree to the "Terms of Service" by pressing ``A`` (short for Agree).
    
 #. Choose whether you want to share your email address with the Electronic Frontier Foundation by pressing ``Y`` to confirm or ``N`` to refuse.
+
+   .. raw:: latex
+
+	\newpage
 
 #. You will then get the output shown below. Indicate the domains that you want to enable HTTPS for by selecting the appropriate listed numbers: 
 

@@ -9,3 +9,7 @@ img {
 	height: auto !important;
 }
 
+.emoji {
+    font-family: "Noto Color Emoji", "Segoe UI Emoji", sans-serif;
+}
+
