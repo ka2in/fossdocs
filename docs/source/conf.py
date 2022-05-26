@@ -120,9 +120,7 @@ latex_engine = 'xelatex'
 
 latex_elements = {
     'fontpkg': r'''
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage{Noto Color Emoji}
 ''',
     'preamble': r'''
 \usepackage[titles]{tocloft}
@@ -133,6 +131,32 @@ latex_elements = {
 ''',
     'pxunit': '1bp',
 }
+
+# Using Symbola font to improve emoji support in PDFs
+
+class SphinxEmojiTable:
+    """Directive to display all supported emoji codes in a table"""
+    has_content = False
+    required_arguments = 0
+    optional_arguments = 0
+    final_argument_whitespace = False
+    def run(self):
+        doc_source_name = self.state.document.attributes['source']
+        codes = get_data('sphinxemoji', 'codes.json')
+        codes = json.loads(codes)
+        lines = []
+        lines.append('.. csv-table:: Supported emoji codes')
+        lines.append('   :header: "Emoji", "Code"')
+        lines.append('   :widths: 10, 40')
+        lines.append('')
+        for code in codes.items():
+            lines.append('   {1},``{0}``'.format(*code))
+        lines.extend(['', ''])
+        self.state_machine.insert_input(lines, source=doc_source_name)
+        return []
+def setup(app):
+    app.add_directive('sphinxemojitable', SphinxEmojiTable)
+
 
 latex_show_urls = 'footnote'
 

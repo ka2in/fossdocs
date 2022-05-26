@@ -25,9 +25,11 @@ Fayçal Alami-Hassani - `@GlobalTech Translations <https://globaltech-translatio
 - Now learning: Docs-as-Code based on `Antora <https://antora.org/>`_ with `AsciiDoc <https://asciidoc-py.github.io/>`_
 - Currently reading:
 
-      |:closed_book:| Web Security for Developers - Real Threats, Practical Defense - Malcolm McDonald - No Starch Press - ISBN: 978-1-59327-994-3
+   .. role:: emoji
+
+   |:closed_book:| Web Security for Developers - Real Threats, Practical Defense - Malcolm McDonald - No Starch Press - ISBN: 978-1-59327-994-3
       
-      |:closed_book:| Eloquent JavaScript - A Modern Introduction to Programming - Marijn Haverbeke - No Starch Press - ISBN: 978-1-59327950-9
+   |:closed_book:| Eloquent JavaScript - A Modern Introduction to Programming - Marijn Haverbeke - No Starch Press - ISBN: 978-1-59327950-9
 
 
 .. note::
