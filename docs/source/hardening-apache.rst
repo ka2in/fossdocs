@@ -254,7 +254,7 @@ A web application firewall (WAF) protects your applications from malicious attac
 
  	.. code-block::
 
- 		``SecRuleEngine DetectionOnly``
+ 		SecRuleEngine DetectionOnly
 
 #. Replace the value **DetectionOnly** by the new value **On**. 
 
