@@ -88,13 +88,13 @@ To backup your website files and the corresponding database, follow these steps:
 
    The Backup Wizard provides multiple options. Select **Full or Partial Backup** > **Select Partial Backup** > **MySQL Databases**. This will allow you to download a backup of the MySQL database(s) of your Joomla website to your local machine.
 
-	.. figure:: pics/partial-backup-db.png
+	.. figure:: _static/pics/joomla-vps/partial-backup-db.png
 		:alt: public_html in the cPanel
 		:align: center 
 
 #. Login to the backend of your Joomla website.
 
-	.. figure:: pics/backend-login-joomla.png
+	.. figure:: _static/pics/joomla-vps/backend-login-joomla.png
 		:alt: public_html in the cPanel
 		:align: center
 
