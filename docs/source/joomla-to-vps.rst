@@ -79,12 +79,16 @@ To backup your website files and the corresponding database, follow these steps:
 	.. figure:: pics/public-html.png
 		:alt: public_html in the cPanel
 		:align: center
+		:width: 754
+		:height: 252
 
 #. In the cPanel main menu, go to **Backup** > **Databases** > **MySQL® Database Wizard**.
 
 	.. figure:: pics/mysql-database-wizard.png
 		:alt: public_html in the cPanel
 		:align: center
+		:width: 754
+		:height: 177
 
    The Backup Wizard provides multiple options. Select **Full or Partial Backup** > **Select Partial Backup** > **MySQL Databases**. This will allow you to download a backup of the MySQL database(s) of your Joomla website to your local machine.
 
@@ -158,7 +162,8 @@ Preparing your new VPS server to host your website
 .. figure:: _static/pics/joomla-vps/spacedog-repairman-mini.png
    :alt: Preparing your new VPS server
    :align: center
-   :width: 400
+   :width: 500
+   :height: 486
 
    "Spacedog Repairman" by `Katharsisdrill <https://katharsisdrill.art>`_ under `CC BY 4.0 <https://creativecommons.org/licenses/by/4.0/>`_ License
 
