@@ -1,5 +1,5 @@
-$latex = 'xelatex --no-pdf ' . $ENV{'LATEXOPTS'} . ' %O %S';
-$pdflatex = 'xelatex ' . $ENV{'LATEXOPTS'} . ' %O %S';
+$latex = 'lualatex --output-format=dvi ' . $ENV{'LATEXOPTS'} . ' %O %S';
+$pdflatex = 'lualatex ' . $ENV{'LATEXOPTS'} . ' %O %S';
 $lualatex = 'lualatex ' . $ENV{'LATEXOPTS'} . ' %O %S';
 $xelatex = 'xelatex --no-pdf ' . $ENV{'LATEXOPTS'} . ' %O %S';
 $makeindex = 'internal xindy ' . $ENV{'XINDYOPTS'} . ' %O -o %D %S';

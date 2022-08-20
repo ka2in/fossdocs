@@ -3,12 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to fossdocs!
-====================================
+Welcome to fossdocs! 
+=====================
 
 You will find here FOSS tutorials about the following topics:
 
-- Technical communication 
+- Technical communication
 - Software documentation 
 - Front/backend web development
 
@@ -25,11 +25,12 @@ Fayçal Alami-Hassani - `@GlobalTech Translations <https://globaltech-translatio
 - Now learning: Docs-as-Code based on `Antora <https://antora.org/>`_ with `AsciiDoc <https://asciidoc-py.github.io/>`_
 - Currently reading:
 
-   .. role:: emoji
+   |closed_book| Web Security for Developers - Real Threats, Practical Defense - Malcolm McDonald - No Starch Press - ISBN: 978-1-59327-994-3
 
-   |:closed_book:| Web Security for Developers - Real Threats, Practical Defense - Malcolm McDonald - No Starch Press - ISBN: 978-1-59327-994-3
-      
-   |:closed_book:| Eloquent JavaScript - A Modern Introduction to Programming - Marijn Haverbeke - No Starch Press - ISBN: 978-1-59327950-9
+   .. |closed_book| image:: /imgs/1f4d5.png
+                   :scale: 15% 
+
+   |closed_book| Eloquent JavaScript - A Modern Introduction to Programming - Marijn Haverbeke - No Starch Press - ISBN: 978-1-59327950-9
 
 
 .. note::
