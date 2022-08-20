@@ -1,9 +1,9 @@
 .. meta::
    :keywords: joomla, vps, sharedhosting, serveradmin, webdev, migration, unmanagedvps
 
-===================================================================
-Migrating a Joomla website from shared hosting to an unmanaged VPS 
-===================================================================
+=========================================================
+Migrating Joomla from shared hosting to an unmanaged VPS 
+=========================================================
 
 Published on May 11, 2022 by Fayçal Alami-Hassani `@gnufcl@fosstodon.org <https://fosstodon.org/@gnufcl>`_
 
