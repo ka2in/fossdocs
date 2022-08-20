@@ -9,7 +9,7 @@ Hardening Apache on an unmanaged VPS
 
 Published on May 22, 2022 by Fayçal Alami-Hassani `@gnufcl@fosstodon.org <https://fosstodon.org/@gnufcl>`_
 
-.. figure:: pics/scifi-ball-mini.png
+.. figure:: _static/pics/hardening/scifi-ball-mini.png
    :alt: Hardening Apache on an unmanaged VPS
    :align: center
 
@@ -169,7 +169,7 @@ Disabling open directory listings
 
 If a directory inside your filesystem lacks an index file such as ``index.html`` or ``index.php``, the web server automatically generates a listing of that particular directory. When this feature is enabled, intruders and eavesdroppers can explore the content of your folders to spot any existing vulnerabilities.
 
-.. figure:: pics/index-of.png
+.. figure:: _static/pics/hardening/index-of.png
    :alt: A directory without an index file
    :align: center
 
