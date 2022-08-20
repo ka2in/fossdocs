@@ -155,10 +155,10 @@ To backup your website files and the corresponding database, follow these steps:
 Preparing your new VPS server to host your website
 ===================================================
 
-.. figure:: pics/spacedog-repairman-mini.png
+.. figure:: _static/pics/joomla-vps/spacedog-repairman-mini.png
    :alt: Preparing your new VPS server
    :align: center
-   :width: 450
+   :width: 400
 
    "Spacedog Repairman" by `Katharsisdrill <https://katharsisdrill.art>`_ under `CC BY 4.0 <https://creativecommons.org/licenses/by/4.0/>`_ License
 
