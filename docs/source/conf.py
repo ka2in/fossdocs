@@ -23,7 +23,7 @@ sys.path.insert(0, os.path.abspath('../..'))
 # -- Project information -----------------------------------------------------
 
 project = 'fossdocs'
-copyright = '2022, GlobalTech Translations'
+copyright = '2025, GlobalTech Translations'
 author = 'Faycal Alami-Hassani'
 
 # The full version, including alpha/beta/rc tags.
@@ -103,7 +103,8 @@ html_theme_options = {
     "navbar_start": "navbar-logo",
     "pygment_light_style": "tango",
     "pygment_dark_style": "native",
-    "footer_items": "copyright",
+    "footer_start": "copyright",
+    "footer_end": [],
     'collapse_navigation': True, # ToC options
     'navigation_depth': 4, # ToC options
 }
@@ -114,6 +115,7 @@ source_suffix = {
     '.md': 'markdown',
 }
 
+html_show_sphinx = False # Removing the mention "Built with Sphinx using a theme provided by Read the Docs."
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -126,7 +128,7 @@ html_logo = "_static/circular-geometry.png"
 html_static_path = ['_static']
 
 
-# -- Options for LaTeX output -------------------------------------------------
+# -- Options for LaTeX output -----------------------------------
 
 latex_engine = 'lualatex'
 
