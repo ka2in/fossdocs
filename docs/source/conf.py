@@ -103,10 +103,15 @@ html_theme_options = {
     "navbar_start": "navbar-logo",
     "pygment_light_style": "tango",
     "pygment_dark_style": "native",
+    "secondary_sidebar_items": ["page-toc"], # Secondary sidebar on the right of the page
     "footer_start": "copyright",
     "footer_end": [],
     'collapse_navigation': True, # ToC options
     'navigation_depth': 4, # ToC options
+}
+
+html_sidebars = {
+    "**": []
 }
 
 source_suffix = {
