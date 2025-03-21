@@ -39,7 +39,7 @@ Fayçal Alami-Hassani - `@GlobalTech Translations <https://globaltech-translatio
 
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
    :caption: Contents
 
    joomla-to-vps

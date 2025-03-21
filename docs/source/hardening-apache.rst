@@ -12,6 +12,7 @@ Published on May 22, 2022 by Fayçal Alami-Hassani `@gnufcl@fosstodon.org <https
 .. figure:: _static/pics/hardening/scifi-ball-mini.png
    :alt: Hardening Apache on an unmanaged VPS
    :align: center
+   :width: 550px
 
    Picture by `J4747 <https://www.blendswap.com/profile/636833>`_ under `CC BY <https://creativecommons.org/licenses/by/4.0/>`_ License
 
