@@ -7,7 +7,7 @@ Hardening Apache on an unmanaged VPS
 
 .. include:: <isonum.txt>
 
-Published on May 22, 2022 by Fayçal Alami-Hassani `@gnufcl@fosstodon.org <https://fosstodon.org/@gnufcl>`_
+Published by Fayçal Alami-Hassani `@gnufcl@fosstodon.org <https://fosstodon.org/@gnufcl>`_
 
 .. figure:: _static/pics/hardening/scifi-ball-mini.png
    :alt: Hardening Apache on an unmanaged VPS
